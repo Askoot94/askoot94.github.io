@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-<body>
-<! this is supposed to be a note>
+<head>
 <style type="text/css">
 	h1{
 		color: mediumpurple;
@@ -22,14 +21,73 @@
 		color: orange;
 		text-align: right;
 	}
+	#side-menu, .show{
+		font-size: 20px;
+		padding: 8px;
+		text-anchor: center;
+		background-color: ghostwhite;
+		border: solid 2px black;
+		margin-right: 85%;
+	}
+	#side-menu{
+		display: none;
+	}
+	.hide{
+		font-size: red;
+		text-align: center;
+		margin-left: 78%;
+		background-color: grey;
+		border: solid 4px black;
+	}
+	.eyeFrames{
+		border: 2px;
+		resize: vertical;
+		overflow: hidden;
+	}
+
+
 </style>
 
+<script>
+function showPanel(){
+	document.getElementById('side-menu').style.display = "inline-block";
+}
+function hidePanel(){
+	document.getElementById("side-menu").style.display = "none";
+}
+</script>
+
 <title>This is the Website Title</title>
+
+</head>
+
+<body>
+
+<!-- This is the test area. Text coding goes here> -->
+
+
 <h1> Hello World </h1>
+
+<p class="show" onclick="showPanel()">Click to show sidebar</p>
+
+<div id="side-menu">
+	<p class="hide" onClick="hidePanel()">Close Menu</p>
+	<p>Insert Link</p>
+	<p>Insert Link2</p>
+	<p>Insert Java Script for Dark Mode</p>
+	<p>Insert Search Bar</p>
+</div>
+
+<div class="eyeFrames">
+	<iframe src="https://www.novelupdates.com/reading-list/" title="NovelUpdates Reading List" style= "height: 610px; width: 450px;" align="right"></iframe>
+</div>
+
 <h2>This is made testing a new style header</h2>
 <p> This is a paragraph without any id or css attached.</p>
 <p class=main-text>This is a paragraph with the css text id "main-text"</p>
 <p class=sub-text>In addition this paragraph is supposed to be the sub-text </p>
+
+<!--Trying to create a sidebar that can be opened and closed-->
 
 
 </body>
