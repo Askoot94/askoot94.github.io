@@ -2,58 +2,142 @@
 <html>
 <head>
 <style type="text/css">
-	h1{
-		color: mediumpurple;
+	body{
+		margin: 0px;
+		background-color: lightgrey;
+	}
+	/* This is the layout for the website*/
+	.header{
+		padding: 5px;
+		background-color: grey;
 		text-align: center;
 	}
-	.main-text{
-		color: skyblue;
-		font-size: 28px;
+	.navigation{
+		overflow: hidden;
+		background-color: #333;
 	}
-	body{
-		background-color: #a6d328;
+	.column{
+		float: left;
+		padding: 0px;
 	}
-	.sub-text{
-		color: palevioletred;
-		font-size: 20;
+	.column.right{
+		width: 24%;
+		background-color: lightgrey;
+		height: 100%;
 	}
-	h2{
-		color: orange;
-		text-align: right;
+	.column.main{
+		width: 76%;
+		background-color: whitesmoke;
+		height: 1800px;
 	}
-	#side-menu, .show{
+	.row:after {
+	content: "";
+	display: table;
+	clear: both;
+	}
+	/* This is the unordered list that will access navigation */
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		position: sticky;
+		top: 0;
+		width: 285px;
+	}
+	li{
+		float: left;
+	}
+	li a {
+		display: block;
+		padding: 14px 16px;
+		text-align: center;
+		border-right: 1px solid white;
+	}
+	li a:hover:not(.active) {
+		background-color: #111;
+	}
+	.active{
+		background-color: purple;
+	}
+
+	/*This is the navigation bar that will appear*/
+	#navigationBar{
+		list-style-type: none;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+		background-color: #333;
+	}
+	#side-menu{
 		font-size: 20px;
 		padding: 8px;
 		text-anchor: center;
 		background-color: ghostwhite;
 		border: solid 2px black;
-		margin-right: 85%;
-	}
-	#side-menu{
 		display: none;
+		position: relative;
+		top: 1px;
 	}
-	.hide{
-		font-size: red;
+	#hideButton{
+		color: red;
 		text-align: center;
-		margin-left: 78%;
-		background-color: grey;
-		border: solid 4px black;
+		padding: 8px;
+		background-color: black;
+		border: solid 2px black;
+		display: none;
+		font-size: 20px;
+		width: 45px;
+		cursor: pointer;
 	}
+	#showButton{
+		font-size: 20px;
+		padding: 8px;
+		text-anchor: center;
+		background-color: ghostwhite;
+		border: solid 2px black;
+		display: inline-block;
+		width: 45px;
+		cursor: pointer;
+	}
+
 	.eyeFrames{
 		border: 2px;
 		resize: vertical;
 		overflow: hidden;
 	}
 
+	/* This is where all the text is styled*/
+	#mainHeader{
+		font-size: 35px;
+		color: purple;
+	}
+	.basicText{
+		font-size: 20px;
+		text-align: left;
+	}
+
 
 </style>
 
 <script>
-function showPanel(){
+function showMenu(){
 	document.getElementById('side-menu').style.display = "inline-block";
 }
-function hidePanel(){
+function hideMenu(){
 	document.getElementById("side-menu").style.display = "none";
+}
+function showHideButton(){
+	document.getElementById("hideButton").style.display = "inline-block";
+}
+function hideHideButton(){
+	document.getElementById("hideButton").style.display = "none";
+}
+function showShowButton(){
+	document.getElementById("showButton").style.display = "inline-block";
+}
+function hideShowButton(){
+	document.getElementById("showButton").style.display = "none";
 }
 </script>
 
@@ -64,31 +148,41 @@ function hidePanel(){
 <body>
 
 <!-- This is the test area. Text coding goes here> -->
+<!-- What IF I had a div element that was above everyting else and that is where the side bar menu is stored, I need to try and experiment with the z-index to make it disappear behind everything-->
 
+<div class="header">
+	<h id="mainHeader"> Hello World </h>
+</div>			
+<div class="row">
+	<div class="navigation">
+		<ul id=navigationBar>
+			<li><a class="active" href="askoot94.github.io">Main</a></li>
+			<li><a href="#info">Info</a></li>
+			<li><a href="#new">New</a></li>
+			<li><a href="#last">Last</a></li>
 
-<h1> Hello World </h1>
+		</ul>
+	</div>
+	<div class="column main">
+		<ul>
+			<li id="hideButton" onClick="hideMenu() + showShowButton() + hideHideButton()">Close</li>
+			<li id="showButton" onclick="showMenu() + showHideButton() + hideShowButton()">Open</li>
+				<div id="side-menu">
+					<p>Insert Link</p>
+					<p>Insert Link2</p>
+					<p>Insert Java Script for Dark Mode</p>
+					<p>Insert Search Bar</p>
+				</div>
+		</ul>
+		<p class="basicText">This is some empty text that is meant to fill up space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. Nunc non velit ante. Phasellus fermentum in arcu vitae placerat. Aenean suscipit lectus a lorem sodales consequat. Duis molestie eget massa vitae facilisis. Donec ultricies auctor dui interdum auctor. Etiam libero elit, iaculis quis sapien et, vehicula volutpat metus. Aenean egestas maximus lacus, a lacinia tortor pellentesque nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Aenean ultricies rutrum elit vel malesuada. </p>
+	</div>
 
-<p class="show" onclick="showPanel()">Click to show sidebar</p>
-
-<div id="side-menu">
-	<p class="hide" onClick="hidePanel()">Close Menu</p>
-	<p>Insert Link</p>
-	<p>Insert Link2</p>
-	<p>Insert Java Script for Dark Mode</p>
-	<p>Insert Search Bar</p>
+	<div class="column right">
+		<div class="eyeFrames">
+			<iframe src="https://www.novelupdates.com/reading-list/" title="NovelUpdates Reading List" style= "height: 610px; width: 90%;" align="right"></iframe>
+		</div>
+	</div>
 </div>
-
-<div class="eyeFrames">
-	<iframe src="https://www.novelupdates.com/reading-list/" title="NovelUpdates Reading List" style= "height: 610px; width: 450px;" align="right"></iframe>
-</div>
-
-<h2>This is made testing a new style header</h2>
-<p> This is a paragraph without any id or css attached.</p>
-<p class=main-text>This is a paragraph with the css text id "main-text"</p>
-<p class=sub-text>In addition this paragraph is supposed to be the sub-text </p>
-
-<!--Trying to create a sidebar that can be opened and closed-->
-
 
 </body>
 </html>
