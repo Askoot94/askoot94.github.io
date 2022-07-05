@@ -151,13 +151,13 @@ function hideShowButton(){
 <!-- What IF I had a div element that was above everyting else and that is where the side bar menu is stored, I need to try and experiment with the z-index to make it disappear behind everything-->
 
 <div class="header">
-	<h id="mainHeader"> Hello World </h>
+	<h id="mainHeader"> Projects (md)</h>
 </div>			
 <div class="row">
 	<div class="navigation">
 		<ul id=navigationBar>
 			<li><a class="active" href="askoot94.github.io">Main</a></li>
-			<li><a href="#projects">Projects</a></li>
+			<li><a href="#info">Info</a></li>
 			<li><a href="#new">New</a></li>
 			<li><a href="#last">Last</a></li>
 
@@ -174,12 +174,19 @@ function hideShowButton(){
 					<p>Insert Search Bar</p>
 				</div>
 		</ul>
-		<p class="basicText">This is some empty text that is meant to fill up space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. Nunc non velit ante. Phasellus fermentum in arcu vitae placerat. Aenean suscipit lectus a lorem sodales consequat. Duis molestie eget massa vitae facilisis. Donec ultricies auctor dui interdum auctor. Etiam libero elit, iaculis quis sapien et, vehicula volutpat metus. Aenean egestas maximus lacus, a lacinia tortor pellentesque nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Aenean ultricies rutrum elit vel malesuada. </p>
+		<p class="basicText">
+			This middle section here should contain links to all my projects. They will be formated to look like twitter posts with an 256 x 256 pixel image/logo and a 16 size font title and 12 size description, when you click on the title it shoud act as a link and send you to that projects dedicated webpage.
+		</p>
+		<br><br>
+		<p>
+			For additional notice, the webpages dedicated to individual projects should possess a wwebsite layout unique to projects. Formatting should be similiar to newgrounds' layout when playing games and watching movies. A link to project documentation should be provided with a blog spot that contains the details of all the processes and changes made with timestamps to know when, what was added. This blog spot could be a drop down menu <!-- F95 Changelog --> or just another website page. 
+		</p>
 	</div>
 
 	<div class="column right">
-		<div class="eyeFrames">
-			<iframe src="https://www.novelupdates.com/reading-list/" title="NovelUpdates Reading List" style= "height: 610px; width: 90%;" align="right"></iframe>
+		<div>
+			<p class="basicText">
+				On the Side bar here, updates to the website should be publised, alternativly there could be some links to contact me via: email, Discord, and social media. Unfortunetly I don't have any social medias so maybe a link to my Github account? Updates should come in blog posts and will have the changes specified in the Github repository as the header with unique information in the body. The blog posts will also be timestamped with date, month, and year. <!-- Check out mantis-X's site for a template --> To make this process easier, I could create a normally in-accessible website page that contains all the blog posts links and in this side bar, put an eyeFrame that will load all the links and posts, this way I won't have to change the information contained in the sidebar for <i>ALL</i> of my individual webpages.
 		</div>
 	</div>
 </div>
