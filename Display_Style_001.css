@@ -1,0 +1,89 @@
+
+/*This css selector has the name of a common HTML attribute, any HTML element that uses this name will have it's style changed to follow this style.
+When a css selector utilizes a '#' then it is an id selector and can only be used by one HTML element
+When a selector name utilizes a '.' then it is a class and can have multiple html objects use it.*/
+
+body{
+		margin: 0px;
+		background: whitesmoke;
+}
+
+/* This is the layout for the website. */
+.header{
+		padding: 5px;
+		text-align: center;
+		margin:auto;
+
+}
+.navigation{ /*This puts a divider across the entire length of the screen*/
+		border-style: solid;
+		border-width: medium;
+		border-color: #303030;
+		background-color: #303030;
+}
+
+/* This is the unordered list that will access navigation */
+#navigationBar{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	background-color: #333;
+	position: sticky;
+}
+li a { 
+/*Any anchor within a list will have this style. This is primarily used in the navigation bar.*/
+	float: left;
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+	border-right: 1px solid white;
+}
+li a:hover:not(.NavActive) {
+/*This will change the background color of any list item with an anchor in it when the cursor hovers over.
+This will ignore any list item with the class ".active"*/
+	background-color: purple;
+}
+.NavActive{
+	background-color: grey;
+}
+
+/*These items are for an attempted side menu.*/
+#side-menu{
+/*Side Bar menu design*/
+	font-size: 20px;
+	padding: 8px;
+	text-anchor: center;
+	background-color: ghostwhite;
+	border: solid 2px black;
+	display: none;
+	position: relative;
+	top: 1px;
+}
+
+#showButton,#hideButton {
+	/*this is the styling of the button that opens the side bar*/
+	float: right;
+	font-size: 20px;
+	padding: 11px;
+	text-align: center;
+	width: 50px;
+	background-color: ghostwhite;
+	cursor: pointer;
+}
+
+.eyeFrames{
+	border: 2px;
+	resize: vertical;
+	overflow: hidden;
+	}
+
+/* This is where all the text is styled*/
+#mainHeader{
+	font-size: 35px;
+	color: purple;
+}
+.basicText{
+	font-size: 20px;
+	text-align: left;
+}

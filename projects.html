@@ -20,15 +20,20 @@
 		float: left;
 		padding: 0px;
 	}
+	.column.left{
+		width:10%;
+		background-color: cadetblue;
+		height: 1800px;
+	}
 	.column.right{
-		width: 24%;
+		width: 20%;
 		background-color: lightgrey;
-		height: 100%;
+		height: 100%; /*100% means that it will only color the background that the elements within the block occupy*/
 	}
 	.column.main{
-		width: 76%;
+		width: 70%;
 		background-color: whitesmoke;
-		height: 1800px;
+		height: 1800px; /*By having this be a numerical value it will fill hte entire horizontal section rather than the below*/
 	}
 	.row:after {
 	content: "";
@@ -43,7 +48,7 @@
 		overflow: hidden;
 		position: sticky;
 		top: 0;
-		width: 285px;
+		width: 100%;
 	}
 	li{
 		float: left;
@@ -54,7 +59,8 @@
 		text-align: center;
 		border-right: 1px solid white;
 	}
-	li a:hover:not(.active) {
+	}
+	li b:hover:not(.active) {
 		background-color: #111;
 	}
 	.active{
@@ -70,8 +76,8 @@
 		background-color: #333;
 	}
 	#side-menu{
-		font-size: 20px;
-		padding: 8px;
+		font-size: 12px;
+		padding: 2px;
 		text-anchor: center;
 		background-color: ghostwhite;
 		border: solid 2px black;
@@ -160,10 +166,9 @@ function hideShowButton(){
 			<li><a class="active">Projects</a></li>
 			<li><a href="">New</a></li>
 			<li><a href="">Last</a></li>
-
 		</ul>
 	</div>
-	<div class="column main">
+	<div class="column left">
 		<ul>
 			<li id="hideButton" onClick="hideMenu() + showShowButton() + hideHideButton()">Close</li>
 			<li id="showButton" onclick="showMenu() + showHideButton() + hideShowButton()">Open</li>
@@ -174,6 +179,8 @@ function hideShowButton(){
 					<p>Insert Search Bar</p>
 				</div>
 		</ul>
+	</div>
+	<div class="column main">
 		<p class="basicText">
 			This middle section here should contain links to all my projects. They will be formated to look like twitter posts with an 256 x 256 pixel image/logo and a 16 size font title and 12 size description, when you click on the title it shoud act as a link and send you to that projects dedicated webpage.
 		</p>
