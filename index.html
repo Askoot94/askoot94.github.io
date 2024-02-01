@@ -1,147 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-	body{
-		margin: 0px;
-		background-color: lightgrey;
-	}
-	/* This is the layout for the website*/
-	.header{
-		padding: 5px;
-		background-color: grey;
-		text-align: center;
-	}
-	.navigation{
-		overflow: hidden;
-		background-color: #333;
-	}
-	.column{
-		float: left;
-		padding: 0px;
-	}
-	.column.right{
-		width: 24%;
-		background-color: lightgrey;
-		height: 100%;
-	}
-	.column.main{
-		width: 76%;
-		background-color: whitesmoke;
-		height: 1800px;
-	}
-	.row:after {
-	content: "";
-	display: table;
-	clear: both;
-	}
-	/* This is the unordered list that will access navigation */
-	ul{
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		position: sticky;
-		top: 0;
-		width: 285px;
-	}
-	li{
-		float: left;
-	}
-	li a {
-		display: block;
-		padding: 14px 16px;
-		text-align: center;
-		border-right: 1px solid white;
-	}
-	li a:hover:not(.active) {
-		background-color: #111;
-	}
-	.active{
-		background-color: purple;
-	}
-
-	/*This is the navigation bar that will appear*/
-	#navigationBar{
-		list-style-type: none;
-		margin: 0px;
-		padding: 0px;
-		overflow: hidden;
-		background-color: #333;
-	}
-	#side-menu{
-		font-size: 20px;
-		padding: 8px;
-		text-anchor: center;
-		background-color: ghostwhite;
-		border: solid 2px black;
-		display: none;
-		position: relative;
-		top: 1px;
-	}
-	#hideButton{
-		color: red;
-		text-align: center;
-		padding: 8px;
-		background-color: black;
-		border: solid 2px black;
-		display: none;
-		font-size: 20px;
-		width: 45px;
-		cursor: pointer;
-	}
-	#showButton{
-		font-size: 20px;
-		padding: 8px;
-		text-anchor: center;
-		background-color: ghostwhite;
-		border: solid 2px black;
-		display: inline-block;
-		width: 45px;
-		cursor: pointer;
-	}
-
-	.eyeFrames{
-		border: 2px;
-		resize: vertical;
-		overflow: hidden;
-	}
-
-	/* This is where all the text is styled*/
-	#mainHeader{
-		font-size: 35px;
-		color: purple;
-	}
-	.basicText{
-		font-size: 20px;
-		text-align: left;
-	}
-
-
-</style>
+<link rel="stylesheet" href = "./Display_Style_001.css">
 
 <script>
 function showMenu(){
 	document.getElementById('side-menu').style.display = "inline-block";
+	document.getElementById("hideButton").style.display = "inline-block";
+	document.getElementById("showButton").style.display = "none";
 }
 function hideMenu(){
 	document.getElementById("side-menu").style.display = "none";
-}
-function showHideButton(){
-	document.getElementById("hideButton").style.display = "inline-block";
-}
-function hideHideButton(){
 	document.getElementById("hideButton").style.display = "none";
-}
-function showShowButton(){
 	document.getElementById("showButton").style.display = "inline-block";
 }
-function hideShowButton(){
-	document.getElementById("showButton").style.display = "none";
-}
+
 </script>
 
-<title>This is the Website Title</title>
+<title>Homepage - Askoot94</title>
 
 </head>
 
@@ -152,36 +28,35 @@ function hideShowButton(){
 
 <div class="header">
 	<h id="mainHeader"> Hello World </h>
-</div>			
-<div class="row">
-	<div class="navigation">
-		<ul id=navigationBar>
-			<li><a class="active">Main</a></li>
-			<li><a href="projects">Projects</a></li>
-			<li><a href="#new">New</a></li>
-			<li><a href="#last">Last</a></li>
+</div>	
 
-		</ul>
-	</div>
-	<div class="column main">
-		<ul>
-			<li id="hideButton" onClick="hideMenu() + showShowButton() + hideHideButton()">Close</li>
-			<li id="showButton" onclick="showMenu() + showHideButton() + hideShowButton()">Open</li>
-				<div id="side-menu">
-					<p>Insert Link</p>
-					<p>Insert Link2</p>
-					<p>Insert Java Script for Dark Mode</p>
-					<p>Insert Search Bar</p>
-				</div>
-		</ul>
-		<p class="basicText">This is some empty text that is meant to fill up space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. Nunc non velit ante. Phasellus fermentum in arcu vitae placerat. Aenean suscipit lectus a lorem sodales consequat. Duis molestie eget massa vitae facilisis. Donec ultricies auctor dui interdum auctor. Etiam libero elit, iaculis quis sapien et, vehicula volutpat metus. Aenean egestas maximus lacus, a lacinia tortor pellentesque nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Aenean ultricies rutrum elit vel malesuada. </p>
-	</div>
+<div>
+	<!-- navigation bar code -->
+	<ul id=navigationBar>
+		<li><a class="NavActive">Home</a></li>
+		<li><a href="projects">Projects</a></li>
+		<li><a href="#new">About</a></li>
+		<li><a href="#last">Blog Spot</a></li>
+		<li><a href="#last">Contact Me</a></li>
+		<li><a href="#last">F.A.Q</a></li>
 
-	<div class="column right">
-		<div class="eyeFrames">
-			<iframe src="https://www.novelupdates.com/reading-list/" title="NovelUpdates Reading List" style= "height: 610px; width: 90%;" align="right"></iframe>
+		<li style="display: inline-block;" id="showButton" onClick="showMenu()">Open</li>
+		<li style="display: none;" id="hideButton" onClick="hideMenu()">Close</li>
+
+	</ul>
+	
+	<!-- Side Menu button Probably full of Script Functions -->
+	<ul>
+		<div id="side-menu">
+			<p>Insert Link</p>
+			<p>Insert Link2</p>
+			<p>Insert Java Script for Dark Mode</p>
+			<p>Insert Search Bar</p>
 		</div>
-	</div>
+	</ul>
+
+<!-- Acutal Body and content -->
+	<p class="basicText">This is some empty text that is meant to fill up space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. Nunc non velit ante. Phasellus fermentum in arcu vitae placerat. Aenean suscipit lectus a lorem sodales consequat. Duis molestie eget massa vitae facilisis. Donec ultricies auctor dui interdum auctor. Etiam libero elit, iaculis quis sapien et, vehicula volutpat metus. Aenean egestas maximus lacus, a lacinia tortor pellentesque nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Aenean ultricies rutrum elit vel malesuada. </p>
 </div>
 
 </body>
