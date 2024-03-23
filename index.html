@@ -1,29 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href = "./Display_Style_001.css">
 
-<script>
-function showMenu(){
-	document.getElementById('side-menu').style.display = "inline-block";
-	document.getElementById("hideButton").style.display = "inline-block";
-	document.getElementById("showButton").style.display = "none";
-}
-function hideMenu(){
-	document.getElementById("side-menu").style.display = "none";
-	document.getElementById("hideButton").style.display = "none";
-	document.getElementById("showButton").style.display = "inline-block";
-}
+	<meta charset="utf-8">
+	<link rel="stylesheet" href = "./styles/Display_Style_001.css"></link> 
+	<!-- Again, the href is a URN not a file directory path. My CPP file will need to properly use this tag. -->
+	<script rel="JavaScript" src = "./scripts/myquote.js"></script>
+	<script rel="JavaScript" src = "./scripts/FunctionalScripts.js"></script>
 
-</script>
-
-<title>Homepage - Askoot94</title>
+<title>Homepage - Askoot</title>
 
 </head>
 
 <body>
 
-<!-- This is the test area. Text coding goes here> -->
+<!-- This is the test area. Text coding goes here -->
 <!-- What IF I had a div element that was above everyting else and that is where the side bar menu is stored, I need to try and experiment with the z-index to make it disappear behind everything-->
 
 <div class="header">
@@ -35,7 +26,7 @@ function hideMenu(){
 	<ul id=navigationBar>
 		<li><a class="NavActive">Home</a></li>
 		<li><a href="projects.html">Projects</a></li>
-		<li><a href="#new">About</a></li>
+		<li><a href="profile.html">About Me</a></li>
 		<li><a href="#last">Blog Spot</a></li>
 		<li><a href="#last">Contact Me</a></li>
 		<li><a href="#last">F.A.Q</a></li>
@@ -56,7 +47,58 @@ function hideMenu(){
 
 <!-- Acutal Body and content -->
 <!-- The idea is to have an unordered list of entries. Each entry is a different  -->
-	<p>This is some empty text that is meant to fill up space. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. Nunc non velit ante. Phasellus fermentum in arcu vitae placerat. Aenean suscipit lectus a lorem sodales consequat. Duis molestie eget massa vitae facilisis. Donec ultricies auctor dui interdum auctor. Etiam libero elit, iaculis quis sapien et, vehicula volutpat metus. Aenean egestas maximus lacus, a lacinia tortor pellentesque nec. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam erat volutpat. Aenean ultricies rutrum elit vel malesuada. </p>
+	<p>Hello world! This website is a personal project meant to help me learn about HTML, CSS, and website design. I am a computer Science Student at Conestoga College. 
+		<br>This simple JavaScript is for a lab assignment.<button type="button" onClick="showQuote()">My Favoutire Quote.</button>
+		<br>The rest of this body is some empty text that is meant to fill up space. Again, this is just a personal project. Oh and you can find <a href="profile.html"> My Profile</a> here or by clicking "About Me" at the top!
+		<br>Duis molestie eget massa vitae facilisis. Donec ultricies auctor dui interdum auctor. Etiam libero elit, iaculis quis sapien et, vehicula volutpat metus. Aenean egestas maximus lacus, a lacinia tortor pellentesque nec. </p>
+		<img src="./images/Conestoga_College.png" width=auto height=150px>
+	<div id="recentProjects">
+		<ul> 
+			<li>
+				<img src="" alt="Project Snapshot">
+				<h1>Restaurant Interaction menu</h1>
+				<br>
+					This project was done in my 2nd year 1st term of my Bachelor's program.
+					I was responsible for leading a team to design a program that could be used in a restaurant environment to allow customers to make orders, and kitchen staff to view those orders and the relevant information about them form connected devices.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. 
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin justo erat, porta sed venenatis a, molestie et ipsum. Aliquam ultrices commodo viverra. 
+			</li>
+			<li>
+				<img src="" alt="Project1 Snapshot">
+				<h1>Project1 Title</h1>
+				<p>This is some test text for one of the project grid pieces.</p>
+			</li>
+			<li>
+				<img src="" alt="Project2 Snapshot">
+				<h1>Project2 Title</h1>
+				<p>This is some test text for one of the project grid pieces.</p>
+			</li>
+		</ul>
+	<!-- Table Two Should be on the right side of the body -->
+		<ul> 
+			<li>
+				<img src="" alt="Project3 Snapshot">
+				<h1>Project3 Title</h1>
+				<p>This is some test text for one of the project grid pieces.</p>
+			</li>
+			<li>
+				<img src="" alt="Project4 Snapshot">
+				<h1>Project4 Title</h1>
+				<p>This is some test text for one of the project grid pieces.</p>
+			</li>
+			<li>
+				<img src="" alt="Project5 Snapshot">
+				<h1>Project5 Title</h1>
+				<p>This is some test text for one of the project grid pieces.</p>
+			</li>
+		</ul>
+
+
+	</div>
 </div>
 
 </body>

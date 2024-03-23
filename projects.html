@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href = "./Display_Style_001.css">
 
-<script>
-function showMenu(){
-	document.getElementById('side-menu').style.display = "inline-block";
-	document.getElementById("hideButton").style.display = "inline-block";
-	document.getElementById("showButton").style.display = "none";
-}
-function hideMenu(){
-	document.getElementById("side-menu").style.display = "none";
-	document.getElementById("hideButton").style.display = "none";
-	document.getElementById("showButton").style.display = "inline-block";
-}
+	<meta charset="utf-8">
+	<link rel="stylesheet" href = "./styles/Display_Style_001.css">
+	<script rel="JavaScript" src = "./scripts/FunctionalScripts.js"></script>
 
-</script>
-
-<title>Projects - Askoot94</title>
+<title>Projects - Askoot</title>
 
 </head>
 
@@ -27,7 +16,7 @@ function hideMenu(){
 <!-- What IF I had a div element that was above everyting else and that is where the side bar menu is stored, I need to try and experiment with the z-index to make it disappear behind everything-->
 
 <div class="header">
-	<h id="mainHeader"> Hello World </h>
+	<h id="mainHeader"> Projects List </h>
 </div>	
 
 <div id="mainBody">
@@ -35,7 +24,7 @@ function hideMenu(){
 	<ul id=navigationBar>
 		<li><a href="index.html">Home</a></li>
 		<li><a class="NavActive">Projects</a></li>
-		<li><a href="#new">About</a></li>
+		<li><a href="profile.html">About Me</a></li>
 		<li><a href="#last">Blog Spot</a></li>
 		<li><a href="#last">Contact Me</a></li>
 		<li><a href="#last">F.A.Q</a></li>
@@ -53,7 +42,7 @@ function hideMenu(){
 		<p>Insert Search Bar</p>
 	</ul>
 
-
+<!-- Acutal Body and content -->
 	<div class="column main">
 		<p class="basicText">
 			This middle section here should contain links to all my projects. They will be formated to look like twitter posts with an 256 x 256 pixel image/logo and a 16 size font title and 12 size description, when you click on the title it shoud act as a link and send you to that projects dedicated webpage.
