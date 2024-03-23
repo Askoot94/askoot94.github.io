@@ -8,3 +8,7 @@ function hideMenu(){
 	document.getElementById("hideButton").style.display = "none";
 	document.getElementById("showButton").style.display = "inline-block";
 };
+function showQuote(){
+	console.log("Showing Quote.");
+	alert("Death is not the greatest loss in life. The greatest loss is what dies inside us while we live. -- Norman Cousins");
+}
